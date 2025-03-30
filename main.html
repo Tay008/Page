@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday&#128140</title>
+</head>
+<body>
+    <style>
+        @font-face {
+    font-family: "Valentine Cute";
+    src: url('fonts/Valentine Cute.ttf') format('truetype');
+        }
+        @media (max-width: 430px) {
+    .heading {
+        font-size: 28px; /* Aur chhota kiya taki screen se bahar na jaye */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .heart {
+        width: 100px; /* Pehle 120px tha, wapas 100px kiya */
+        height: 100px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .button {
+        font-size: 14px; /* Font aur chhota kiya */
+        padding: 6px 25px; /* Button width bhi adjust ki */
+        margin-top: 30px; /* Space thodi aur adjust ki */
+    }
+}
+
+@media (max-width: 380px) { 
+    /* Yeh 5.5-5.8 inch screens ke liye */
+    .heading {
+        font-size: 24px; /* Aur chhota kiya */
+    }
+
+    .heart {
+        width: 90px;
+        height: 90px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 90px;
+        height: 90px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 5px 20px;
+    }
+}
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6f2;
+            flex-direction: column;
+            font-family: "Valentine Cute"
+        }
+        .heading{
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 60px;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            box-shadow: -10px 10px 90px rgba(255, 0, 0, 0.8);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+        .button{
+            margin-top: 60px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: "Valentine Cute";
+            background-color: #E55451;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">For Someone Special&#128150;&#128525;</h1>
+    <div class="heart">
+    </div>
+    <button class="button">Click here</button>
+</body>
+</html>
